@@ -3,65 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <title>Eventura</title>
+
     <style>
-        /* Dropdown Button */
-        .dropbtn {
-            background-color: #04AA6D;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("i3.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .user-form{
+            width: 700px; /* Adjusted for a wider layout */
+            padding: 20px;
+            background-color: blueviolet;
             color: white;
-            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .user-form h2{
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two-column layout */
+            gap: 20px; /* Space between columns */
+        }
+
+        .input-box p{
+            margin-bottom: 8px;
             font-size: 16px;
+        }
+
+        .input-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-box input[type="text"],
+        .input-box input[type="tel"],
+        .input-box input[type="email"],
+        .input-box input[type="password"] {
+            padding: 10px;
             border: none;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
 
-        /* The container <div> - needed to position the dropdown content */
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        .input-box input[type="radio"] {
+            margin-right: 5px;
         }
 
-        /* Dropdown Content (Hidden by Default) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
+        .btn-container{
+            grid-column: span 2; /* Makes button span both columns */
+            display: flex;
+            justify-content: center;
         }
 
-        /* Links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
+        #create-btn{
+            width: 50%;
+            height: 45px;
+            background-color: white;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
         }
 
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Change the background color of the dropdown button when the dropdown content is shown */
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
+        #create-btn:hover{
+            border: 2px solid black;
         }
     </style>
 </head>
 <body>
+    <div class="user-form">
+        <h2>Create Account</h2>
+        <form action="" class="user">
+            <div class="form-grid">
+                <div class="input-box">
+                    <p>First Name</p>
+                    <input type="text" placeholder="First Name">
+                </div>
 
-<div class="dropdown">
-    <button class="dropbtn">Dropdown</button>
-    <div class="dropdown-content">
-        <a href="#">User</a>
-        <a href="#">Owner</a>
+                <div class="input-box">
+                    <p>Last Name</p>
+                    <input type="text" placeholder="Last Name">
+                </div>
+
+                <div class="input-box">
+                    <p>Loan Id (eg. LPxxxxxx)</p>
+                    <input type="text" placeholder="Loan Id">
+                </div>
+
+                <div class="input-box">
+                    <p>Age</p>
+                    <input type="text" placeholder="Age">
+                </div>
+
+                <div class="input-box">
+                    <p>Married</p>
+                    <label><input type="radio" name="married" value="yes"> Yes</label>
+                    <label><input type="radio" name="married" value="no"> No</label>
+                </div>
+
+                <div class="input-box">
+                    <p>Gender</p>
+                    <input type="text" placeholder="Gender">
+                </div>
+
+                <div class="input-box">
+                    <p>Self Employed</p>
+                    <label><input type="radio" name="self_employed" value="yes"> Yes</label>
+                    <label><input type="radio" name="self_employed" value="no"> No</label>
+                </div>
+
+                <div class="input-box">
+                    <p>Applicant Income</p>
+                    <input type="text" placeholder="Applicant Income">
+                </div>
+
+                <div class="input-box">
+                    <p>Coapplicant Income</p>
+                    <input type="text" placeholder="Coapplicant Income">
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit" id="create-btn">Create</button>
+            </div>
+        </form>
     </div>
-</div>
-
 </body>
 </html>

@@ -14,24 +14,11 @@
     justify-content: space-evenly;
 }
 
-/* Logo */
-.head_logo{
-    height: 50px;
-    width: 100px;
-}
-
 .logo{
-    height: 50px;
-    width: 100%;
-    align-items: center;
-}
-
-.border{
-    border: 2px solid transparent;
-}
-
-.border:hover{
-    border: 2px solid white;
+    background-image: url(logo.png);
+    background-size: cover;
+    height: 55px;
+    width: 150px;
 }
 
 .head_search{
@@ -178,6 +165,13 @@
     height: 50vh;
 }
 
+.image h1{
+    text-align: center;
+    color: rgb(228, 249, 125);
+    font-size: 80px;
+    padding-top: 100px;
+}
+
 .item-box{
     display: flex;
     flex-wrap: wrap;
@@ -194,6 +188,10 @@
     background-color: white;
     box-sizing: border-box;
     padding: 10px;
+}
+
+.box:hover{
+    border: 3px solid black;
 }
 
 .box-image{
