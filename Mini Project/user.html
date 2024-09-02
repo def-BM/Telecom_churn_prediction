@@ -28,6 +28,8 @@
             height: 700px;
             background-color: blueviolet;
             color: white;
+            border: 2px solid black;
+            border-radius: 10px;
         }
 
         .user-form h2{
@@ -37,12 +39,12 @@
 
         .input-box{
             position: relative;
-            width: 100%;
+            width: 95%;
             height: 25px;
-            margin: 50px 0;
+            margin: 50px 10px;
         }
 
-        .input-box p{
+        .input-box label{
             margin-left: 10px;
             font-size: 20px;
         }
@@ -94,33 +96,33 @@
         <h2>Create Account</h2>
         <form action="" class="user">
             <div class="input-box">
-                <p>Your name</p>
-                <input type="text" placeholder="Full Name">
+                <label for="name">Your name</label>
+                <input type="text" placeholder="Full Name" required>
             </div>
 
             <div class="input-box">
-                <p>Mobile no.</p>
-                <input type="tel">
+                <label for="contact">Mobile no.</label>
+                <input type="tel" required>
             </div>
 
             <div class="input-box">
-                <p>email (*use as username.)</p>
-                <input type="email">
+                <label for="email">email (*use as username.)</label>
+                <input type="email" required>
             </div>
 
             <div class="input-box">
-                <p>Create Password</p>
-                <input type="password" placeholder="Password">
+                <label for="password">Create Password</label>
+                <input type="password" placeholder="Password" required>
             </div>
 
             <div class="input-box">
-                <p>Confirm Password</p>
-                <input type="password" placeholder="Confirm Password">
+                <label for="Confirm password">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" required>
             </div>
 
             <div class="input-box">
-                <p>Enter your current location</p>
-                <input type="text" placeholder="Enter your location">
+                <label for="location">Enter your current location</label>
+                <input type="text" placeholder="Enter your location" required>
             </div>
 
             <div class="btn-container">
@@ -128,6 +130,12 @@
             </div>
         </form>
     </div>
+
+    <script>
+        document.getElementById("create-btn").addEventListener('click',function(){
+            window.location.href = 'user_login.html';
+        });
+    </script>
     
 </body>
 </html>

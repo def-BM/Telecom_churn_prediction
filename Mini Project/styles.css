@@ -129,6 +129,8 @@
 .navbar{
     background-color: #222f3d;
     width: 100vw;
+    z-index: 1000;
+    position: relative;
 }
 
 .navbar ul{
@@ -152,6 +154,73 @@
 } 
 
 .navbar ul li a:hover{
+    background: blue;
+}
+
+
+.navbar ul li ul.submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #222f3d;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+}
+
+.navbar ul li:hover > .submenu{
+    display: block;
+}
+
+.navbar ul li ul.submenu li{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.navbar ul li ul.submenu li:hover{
+    background: blue;
+}
+
+.navbar ul li ul.submenu li ul{
+    border: 1px solid white;
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #222f3d;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li ul.submenu li:hover > .user-menu{
+    display: block;
+}
+
+.navbar ul li ul.submenu li:hover > .owner-menu{
+    display: block;
+}
+
+.navbar ul li ul.submenu li:hover > ul{
+    display: block;
+}
+
+.navbar ul li ul.submenu li ul li{
+    width: 200px;
+}
+
+.navbar ul li ul.submenu li ul li a{
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+.navbar ul li ul.submenu li ul li a:hover{
     background: blue;
 }
 
@@ -252,7 +321,7 @@
     color: white;
     text-align: center;
     padding: 3vh;
-    height:10vh;
+    height:auto;
     width: 100vw;
     /* position: fixed; */
 }
