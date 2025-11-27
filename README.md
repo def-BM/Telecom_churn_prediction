@@ -63,22 +63,18 @@ feature_columns.pkl
 
 ```
 Telecom_Churn_Prediction/
-│ data/
-│ ├─ telecom_churn.csv
 │
-│ notebooks/
-│ ├─ data_processing.ipynb
-│ ├─ model_training.ipynb
+│─ telecom_churn.csv
 │
-│ src/
-│ ├─ churn_model.pkl
-│ ├─ scaler.pkl
-│ ├─ feature_columns.pkl
-│ ├─ predict.py
+│─ data_processing.ipynb
 │
-│ app/
-│ ├─ main.py  (GUI / Streamlit application)
-│ ├─ requirements.txt
+│─ churn_model.pkl
+│─ scaler_info.pkl
+│─ label_encoders.pkl
+│
+│
+│─ main.py  (GUI / Streamlit application)
+│─ requirements.txt
 │
 │ README.md
 ```
