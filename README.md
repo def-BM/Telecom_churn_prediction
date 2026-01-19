@@ -4,6 +4,11 @@ This project predicts whether a telecom customer is likely to churn (leave the s
 
 ---
 
+## Live Demo:
+https://telecomchurnprediction-jf3o335smfgwwj4awedfnx.streamlit.app/
+
+---
+
 ## Project Overview
 A supervised machine learning model was developed using a structured telecom customer dataset. After preprocessing and model evaluation, the final trained model achieved an accuracy of **76.72%**.
 
